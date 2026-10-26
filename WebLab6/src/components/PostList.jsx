@@ -3,7 +3,7 @@ import { fetchPosts } from "../api/postsApi";
 const posts = fetchPosts();
 
 
-function Postlist(){
+ export function Postlist(){
  return(
  <div>
 {posts.map((postslist) =>(

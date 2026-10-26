@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import { useReducer } from 'react'
 import { postsReducer } from './reducer/postsReducer';
 import FilterForm from './components/FilterForm'
-function App(){
+ function App(){
 const initalState = {
     posts: [],
     loading: false,
@@ -28,7 +28,7 @@ try{
 };
 loadPosts(); }, []);
 const filtredPosts = state.posts.filter(post =>
-  post.title.toLowerCase().includes(searchTerm.toLowerCase)
+  post.title.toLowerCase().includes(searchTerm.toLowerCase())
 );
 
 
@@ -45,7 +45,7 @@ const filtredPosts = state.posts.filter(post =>
   {state.error && <p id='error'> Error: {state.error}</p>}
   
   
-  {!state.loading && !state.error && state.posts.lenght === 0 && <p>No posts found.</p>}
+  {!state.loading && !state.error && state.posts.length === 0 && <p>No posts found.</p>}
   <ul>
    {filtredPosts.map(post => ( 
     <li key={post.id}>{post.title}</li>
